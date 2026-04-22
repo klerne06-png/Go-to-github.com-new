@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | What's Shakin' & What's Brewin' Merch</title>
+  <meta name="description" content="Rep What's Shakin' and What's Brewin'! Shop t-shirts, hoodies, hats and more. Show your love for fresh lemon shake-ups and craft coffee.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .shop-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 28px; }
+    .shop-item {
+      background: var(--bg-white); border-radius: var(--radius-lg);
+      overflow: hidden; box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .shop-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .shop-item-image {
+      width: 100%; aspect-ratio: 1; background: #f0f0f0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 4rem; color: #ccc; overflow: hidden;
+    }
+    .shop-item-image img { width: 100%; height: 100%; object-fit: cover; }
+    .shop-item-info { padding: 24px; }
+    .shop-item-info h4 { margin-bottom: 4px; }
+    .shop-item-info .price { font-weight: 700; font-size: 1.1rem; margin-bottom: 8px; }
+    .shop-item-info .description { font-size: 0.9rem; color: var(--text-light); margin-bottom: 16px; }
+    .shop-item-options { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+    .shop-item-options .option {
+      padding: 6px 14px; border-radius: 50px; font-size: 0.8rem; font-weight: 600;
+      background: var(--bg); border: 1px solid var(--border); cursor: pointer;
+      transition: var(--transition);
+    }
+    .shop-item-options .option:hover, .shop-item-options .option.selected {
+      background: #000; color: #fff; border-color: #000;
+    }
+    .shop-coming-soon {
+      text-align: center; padding: 60px 24px;
+      background: var(--bg); border-radius: var(--radius-lg);
+      border: 2px dashed var(--border);
+    }
+    .shop-coming-soon h3 { margin-bottom: 8px; }
+    .shop-coming-soon p { color: var(--text-light); }
+    .notify-form {
+      display: flex; gap: 12px; max-width: 440px; margin: 24px auto 0;
+    }
+    .notify-form input {
+      flex: 1; padding: 14px 18px; border: 2px solid var(--border);
+      border-radius: 50px; font-size: 1rem; background: var(--bg-white);
+    }
+    .notify-form input:focus { outline: none; border-color: #000; }
+    .notify-form button {
+      padding: 14px 28px; border-radius: 50px;
+      background: #000; color: #fff; font-weight: 700;
+      transition: var(--transition);
+    }
+    .notify-form button:hover { transform: scale(1.05); }
+    .size-guide { margin-top: 40px; }
+    .size-guide table {
+      width: 100%; max-width: 500px; margin: 16px auto 0;
+      border-collapse: collapse; font-size: 0.9rem;
+    }
+    .size-guide th, .size-guide td {
+      padding: 10px 16px; border: 1px solid var(--border); text-align: center;
+    }
+    .size-guide th { background: #000; color: #fff; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <span class="shakin-text">What's Shakin'</span>
+        <span class="amp">&</span>
+        <span class="brewin-text">What's Brewin'</span>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="order.html">Order Online</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html#book" class="nav-cta">Book an Event</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header dark-bg" style="background:url('img/image2.jpg') center/cover no-repeat;position:relative">
+    <div style="position:absolute;inset:0;background:rgba(0,0,0,0.65)"></div>
+    <div class="container" style="position:relative;z-index:1">
+      <h1>Shop Merch</h1>
+      <p>Rep What's Shakin' &amp; What's Brewin' wherever you go!</p>
+    </div>
+  </div>
+
+  <!-- Shop Items -->
+  <section>
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label shakin">Official Merch</span>
+        <h2>Swag Drop</h2>
+        <p>Show your love for fresh shakes and craft coffee. New items dropping soon!</p>
+      </div>
+
+      <div class="shop-grid fade-up">
+
+        <!-- T-Shirt: What's Shakin' -->
+        <div class="shop-item">
+          <div class="shop-item-image">
+            <!-- Replace with actual product photo when available -->
+            <span>&#128085;</span>
+          </div>
+          <div class="shop-item-info">
+            <h4>What's Shakin' Tee</h4>
+            <div class="price">Coming Soon</div>
+            <p class="description">Classic What's Shakin' logo tee. Black &amp; white design featuring our signature lemon logo.</p>
+            <div class="shop-item-options">
+              <span class="option">S</span>
+              <span class="option">M</span>
+              <span class="option">L</span>
+              <span class="option">XL</span>
+              <span class="option">2XL</span>
+            </div>
+            <button class="btn btn-shakin" style="width:100%;justify-content:center" onclick="showToast('Sign up below to be notified when shirts drop!')">Notify Me</button>
+          </div>
+        </div>
+
+        <!-- T-Shirt: What's Brewin' -->
+        <div class="shop-item">
+          <div class="shop-item-image">
+            <span>&#128085;</span>
+          </div>
+          <div class="shop-item-info">
+            <h4>What's Brewin' Tee</h4>
+            <div class="price">Coming Soon</div>
+            <p class="description">What's Brewin' logo tee. Perfect for coffee lovers who want to rep the brand.</p>
+            <div class="shop-item-options">
+              <span class="option">S</span>
+              <span class="option">M</span>
+              <span class="option">L</span>
+              <span class="option">XL</span>
+              <span class="option">2XL</span>
+            </div>
+            <button class="btn btn-shakin" style="width:100%;justify-content:center" onclick="showToast('Sign up below to be notified when shirts drop!')">Notify Me</button>
+          </div>
+        </div>
+
+        <!-- Stickers -->
+        <div class="shop-item">
+          <div class="shop-item-image">
+            <span>&#127915;</span>
+          </div>
+          <div class="shop-item-info">
+            <h4>Logo Sticker Pack</h4>
+            <div class="price">Coming Soon</div>
+            <p class="description">Waterproof vinyl stickers featuring both the What's Shakin' and What's Brewin' logos. Stick 'em on your water bottle, laptop, or car!</p>
+            <button class="btn btn-shakin" style="width:100%;justify-content:center" onclick="showToast('Sign up below to be notified when stickers drop!')">Notify Me</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Already available: Coffee beans -->
+      <div style="margin-top:60px">
+        <div class="section-header fade-up">
+          <span class="section-label brewin">Available Now</span>
+          <h2>Take It Home</h2>
+          <p>Grab a bag of our beans at any event &mdash; or message us to order!</p>
+        </div>
+
+        <div class="shop-grid fade-up">
+          <div class="shop-item">
+            <div class="shop-item-image" style="background:#1a1a1a;color:#fff;font-size:3rem">&#9749;</div>
+            <div class="shop-item-info">
+              <h4>Flavored Coffee Beans</h4>
+              <div class="price">$12.15 &mdash; $23.00</div>
+              <p class="description">Our signature flavored coffee beans. Now featuring Caramel Bourbon Pecan! Available in 8oz and 16oz bags.</p>
+              <div class="shop-item-options" style="margin-bottom:8px">
+                <span class="option">Caramel Bourbon Pecan</span>
+              </div>
+              <div class="shop-item-options">
+                <span class="option">8oz — $12.15</span>
+                <span class="option">16oz — $23.00</span>
+              </div>
+              <a href="contact.html" class="btn btn-shakin" style="width:100%;justify-content:center">Message to Order</a>
+            </div>
+          </div>
+
+          <div class="shop-item">
+            <div class="shop-item-image" style="background:#1a1a1a;color:#fff;font-size:3rem">&#9749;</div>
+            <div class="shop-item-info">
+              <h4>Espresso Beans</h4>
+              <div class="price">$12.15 &mdash; $23.99</div>
+              <p class="description">Bold espresso roast beans. Available in 8oz and 16oz bags.</p>
+              <div class="shop-item-options">
+                <span class="option">8oz — $12.15</span>
+                <span class="option">16oz — $23.99</span>
+              </div>
+              <a href="contact.html" class="btn btn-shakin" style="width:100%;justify-content:center">Message to Order</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Notify / Waitlist -->
+  <section style="background:var(--bg-white)">
+    <div class="container">
+      <div class="events-banner fade-up">
+        <h2>Get Notified When Merch Drops</h2>
+        <p>Be the first to know when new shirts, hats, and swag are available. Drop your email and we'll let you know!</p>
+        <form class="notify-form" onsubmit="event.preventDefault(); showToast('You\'re on the list! We\'ll let you know when merch is available.'); this.reset();">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Notify Me</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>What's Shakin' & What's Brewin'</h3>
+          <p>Founded by sisters Bailey &amp; Camryn Emmons. Two mobile beverage trailers bringing fresh-squeezed lemon shake-ups and handcrafted coffee to events near you. Est. 2022.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/profile.php?id=61550268173974" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="menu.html">Full Menu</a>
+          <a href="order.html">Order Online</a>
+          <a href="shop.html">Shop Merch</a>
+          <a href="about.html">Our Story</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="contact.html#book">Event Catering</a>
+          <a href="contact.html#book">Private Parties</a>
+          <a href="contact.html#book">Wedding Rental</a>
+          <a href="contact.html#book">Corporate Events</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="contact.html">Send an Inquiry</a>
+          <a href="https://www.facebook.com/profile.php?id=61550268173974" target="_blank" rel="noopener">Shakin' on Facebook</a>
+          <a href="https://www.facebook.com/profile.php?id=61587524812366" target="_blank" rel="noopener">Brewin' on Facebook</a>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2024&ndash;2026 What's Shakin' & What's Brewin'. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <div class="floating-social">
+    <a href="https://www.facebook.com/profile.php?id=61550268173974" target="_blank" rel="noopener" class="fb" aria-label="Facebook"><svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Size option selection
+    document.querySelectorAll('.shop-item-options .option').forEach(function(opt) {
+      opt.addEventListener('click', function() {
+        // Deselect siblings
+        this.parentElement.querySelectorAll('.option').forEach(function(o) { o.classList.remove('selected'); });
+        this.classList.add('selected');
+      });
+    });
+  </script>
+</body>
+</html>

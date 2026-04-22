@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Online | What's Shakin' & What's Brewin'</title>
+  <meta name="description" content="Order ahead from What's Shakin' and What's Brewin'. Skip the line at your next event!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <span class="shakin-text">What's Shakin'</span>
+        <span class="amp">&</span>
+        <span class="brewin-text">What's Brewin'</span>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="order.html" class="active">Order Online</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html#book" class="nav-cta">Book an Event</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header dark-bg">
+    <div class="container">
+      <h1>Order Online</h1>
+      <p>Build your perfect drink, skip the line, and pick up at the event!</p>
+    </div>
+  </div>
+
+  <!-- Order Section -->
+  <section>
+    <div class="container">
+
+      <!-- Event selector -->
+      <div style="text-align:center;margin-bottom:48px;" class="fade-up">
+        <div style="background:var(--bg-white);border-radius:var(--radius-lg);padding:32px;display:inline-block;box-shadow:var(--shadow-sm);max-width:600px;width:100%">
+          <h3 style="margin-bottom:16px">Select Your Pickup Event</h3>
+          <div class="form-group" style="margin-bottom:12px">
+            <select id="event-select" style="text-align:center">
+              <option value="">Choose an upcoming event...</option>
+              <option value="pickup">Pickup at Next Event (TBA)</option>
+            </select>
+          </div>
+          <p style="font-size:0.85rem;color:var(--text-light)">We'll update this with our upcoming events. Follow us on social media for the latest schedule!</p>
+        </div>
+      </div>
+
+      <!-- Business tabs -->
+      <div class="menu-tabs" style="margin-bottom:32px">
+        <button class="menu-tab active-shakin" data-brand="shakin" onclick="switchOrderBrand('shakin')">What's Shakin'</button>
+        <button class="menu-tab" data-brand="brewin" onclick="switchOrderBrand('brewin')">What's Brewin'</button>
+      </div>
+
+      <div class="order-layout">
+        <!-- Menu items -->
+        <div id="order-items">
+          <!-- What's Shakin' items -->
+          <div id="order-shakin">
+            <h3 style="margin-bottom:20px">Signature Drinks</h3>
+
+            <div class="order-menu-item" data-name="Lemon Shake-Up" data-price="6.00" data-brand="shakin">
+              <div class="item-info">
+                <h4>Lemon Shake-Up</h4>
+                <p>Fresh-squeezed with real lemons (32oz)</p>
+              </div>
+              <div class="item-actions">
+                <span style="font-weight:700;color:var(--shakin-secondary)">$6.00</span>
+                <button class="add-to-cart-btn shakin-btn" onclick="addToCart('Lemon Shake-Up', 6.00, 'shakin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item" data-name="Limeade" data-price="6.00" data-brand="shakin">
+              <div class="item-info">
+                <h4>Limeade</h4>
+                <p>Fresh-squeezed limeade (32oz)</p>
+              </div>
+              <div class="item-actions">
+                <span style="font-weight:700;color:var(--shakin-secondary)">$6.00</span>
+                <button class="add-to-cart-btn shakin-btn" onclick="addToCart('Limeade', 6.00, 'shakin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item" data-name="Arnold Palmer" data-price="5.00" data-brand="shakin">
+              <div class="item-info">
+                <h4>Arnold Palmer</h4>
+                <p>Half lemonade, half tea</p>
+              </div>
+              <div class="item-actions">
+                <span style="font-weight:700;color:var(--shakin-secondary)">$5.00</span>
+                <button class="add-to-cart-btn shakin-btn" onclick="addToCart('Arnold Palmer', 5.00, 'shakin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Sweet Tea</h4>
+                <p>Classic sweet tea</p>
+              </div>
+              <div class="item-actions">
+                <span style="font-weight:700;color:var(--shakin-secondary)">$4.00</span>
+                <button class="add-to-cart-btn shakin-btn" onclick="addToCart('Sweet Tea', 4.00, 'shakin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Unsweet Tea</h4>
+                <p>Unsweet for the purists</p>
+              </div>
+              <div class="item-actions">
+                <span style="font-weight:700;color:var(--shakin-secondary)">$4.00</span>
+                <button class="add-to-cart-btn shakin-btn" onclick="addToCart('Unsweet Tea', 4.00, 'shakin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Half & Half Tea</h4>
+                <p>Half sweet, half unsweet</p>
+              </div>
+              <div class="item-actions">
+                <span style="font-weight:700;color:var(--shakin-secondary)">$4.00</span>
+                <button class="add-to-cart-btn shakin-btn" onclick="addToCart('Half & Half Tea', 4.00, 'shakin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Soda</h4>
+                <p>Dr Pepper, Coke, Diet Coke, Sprite</p>
+              </div>
+              <div class="item-actions">
+                <span style="font-weight:700;color:var(--shakin-secondary)">$2.00</span>
+                <button class="add-to-cart-btn shakin-btn" onclick="addToCart('Soda', 2.00, 'shakin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Water</h4>
+                <p>Bottled water</p>
+              </div>
+              <div class="item-actions">
+                <span style="font-weight:700;color:var(--shakin-secondary)">$2.00</span>
+                <button class="add-to-cart-btn shakin-btn" onclick="addToCart('Water', 2.00, 'shakin')">Add</button>
+              </div>
+            </div>
+
+            <h3 style="margin:32px 0 20px">Add-Ins & Extras</h3>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Flavor Add-In</h4>
+                <p>Cherry, Watermelon, Mango, Peach & more</p>
+              </div>
+              <div class="item-actions">
+                <span style="font-weight:700;color:var(--shakin-secondary)">+$1.00</span>
+                <button class="add-to-cart-btn shakin-btn" onclick="addToCart('Flavor Add-In', 1.00, 'shakin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Boba</h4>
+                <p>Strawberry, Mango, or Passion Fruit</p>
+              </div>
+              <div class="item-actions">
+                <span style="font-weight:700;color:var(--shakin-secondary)">+$1.00</span>
+                <button class="add-to-cart-btn shakin-btn" onclick="addToCart('Boba', 1.00, 'shakin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Cotton Candy</h4>
+              </div>
+              <div class="item-actions">
+                <span style="font-weight:700;color:var(--shakin-secondary)">$3.00</span>
+                <button class="add-to-cart-btn shakin-btn" onclick="addToCart('Cotton Candy', 3.00, 'shakin')">Add</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- What's Brewin' items -->
+          <div id="order-brewin" style="display:none">
+            <h3 style="margin-bottom:20px">Base Drinks</h3>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Cold Brew</h4>
+                <p>Smooth & bold</p>
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 5.50)">16oz $5.50</button>
+                  <button class="size-btn" onclick="selectSize(this, 6.25)">24oz $6.25</button>
+                </div>
+              </div>
+              <div class="item-actions">
+                <button class="add-to-cart-btn brewin-btn" onclick="addToCartSize(this, 'Cold Brew', 'brewin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Chai Latte</h4>
+                <p>Spiced chai with steamed milk</p>
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 6.50)">16oz $6.50</button>
+                  <button class="size-btn" onclick="selectSize(this, 7.25)">24oz $7.25</button>
+                </div>
+              </div>
+              <div class="item-actions">
+                <button class="add-to-cart-btn brewin-btn" onclick="addToCartSize(this, 'Chai Latte', 'brewin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Matcha</h4>
+                <p>Premium matcha latte</p>
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 6.50)">16oz $6.50</button>
+                  <button class="size-btn" onclick="selectSize(this, 7.75)">24oz $7.75</button>
+                </div>
+              </div>
+              <div class="item-actions">
+                <button class="add-to-cart-btn brewin-btn" onclick="addToCartSize(this, 'Matcha', 'brewin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Latte</h4>
+                <p>Classic espresso & steamed milk</p>
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 6.50)">16oz $6.50</button>
+                  <button class="size-btn" onclick="selectSize(this, 7.75)">24oz $7.75</button>
+                </div>
+              </div>
+              <div class="item-actions">
+                <button class="add-to-cart-btn brewin-btn" onclick="addToCartSize(this, 'Latte', 'brewin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Mocha</h4>
+                <p>Espresso, chocolate & steamed milk</p>
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 6.50)">16oz $6.50</button>
+                  <button class="size-btn" onclick="selectSize(this, 7.75)">24oz $7.75</button>
+                </div>
+              </div>
+              <div class="item-actions">
+                <button class="add-to-cart-btn brewin-btn" onclick="addToCartSize(this, 'Mocha', 'brewin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Hot Coffee</h4>
+                <p>Fresh brewed drip coffee</p>
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 3.50)">16oz $3.50</button>
+                  <button class="size-btn" onclick="selectSize(this, 4.50)">24oz $4.50</button>
+                </div>
+              </div>
+              <div class="item-actions">
+                <button class="add-to-cart-btn brewin-btn" onclick="addToCartSize(this, 'Hot Coffee', 'brewin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Americano</h4>
+                <p>Bold espresso with hot water</p>
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 4.25)">16oz $4.25</button>
+                  <button class="size-btn" onclick="selectSize(this, 5.00)">24oz $5.00</button>
+                </div>
+              </div>
+              <div class="item-actions">
+                <button class="add-to-cart-btn brewin-btn" onclick="addToCartSize(this, 'Americano', 'brewin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Gourmet Hot Cocoa</h4>
+                <p>Rich, creamy hot chocolate</p>
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 4.25)">16oz $4.25</button>
+                  <button class="size-btn" onclick="selectSize(this, 5.00)">24oz $5.00</button>
+                </div>
+              </div>
+              <div class="item-actions">
+                <button class="add-to-cart-btn brewin-btn" onclick="addToCartSize(this, 'Gourmet Hot Cocoa', 'brewin')">Add</button>
+              </div>
+            </div>
+
+            <h3 style="margin:32px 0 20px">Specialty Drinks</h3>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Muddy Paws</h4>
+                <p>Our #1 seller!</p>
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 7.25)">16oz $7.25</button>
+                  <button class="size-btn" onclick="selectSize(this, 8.50)">24oz $8.50</button>
+                </div>
+              </div>
+              <div class="item-actions">
+                <button class="add-to-cart-btn brewin-btn" onclick="addToCartSize(this, 'Muddy Paws', 'brewin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Big Red</h4>
+                <p>Bold & unforgettable</p>
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 7.25)">16oz $7.25</button>
+                  <button class="size-btn" onclick="selectSize(this, 8.50)">24oz $8.50</button>
+                </div>
+              </div>
+              <div class="item-actions">
+                <button class="add-to-cart-btn brewin-btn" onclick="addToCartSize(this, 'Big Red', 'brewin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>The Turtle</h4>
+                <p>Rich caramel & chocolate</p>
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 7.25)">16oz $7.25</button>
+                  <button class="size-btn" onclick="selectSize(this, 8.50)">24oz $8.50</button>
+                </div>
+              </div>
+              <div class="item-actions">
+                <button class="add-to-cart-btn brewin-btn" onclick="addToCartSize(this, 'The Turtle', 'brewin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Day Dreamer Chai</h4>
+                <p>Our twist on classic chai</p>
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 7.00)">16oz $7.00</button>
+                  <button class="size-btn" onclick="selectSize(this, 8.25)">24oz $8.25</button>
+                </div>
+              </div>
+              <div class="item-actions">
+                <button class="add-to-cart-btn brewin-btn" onclick="addToCartSize(this, 'Day Dreamer Chai', 'brewin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Funky Monkey</h4>
+                <p>Fun & fruity coffee creation</p>
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 7.00)">16oz $7.00</button>
+                  <button class="size-btn" onclick="selectSize(this, 8.25)">24oz $8.25</button>
+                </div>
+              </div>
+              <div class="item-actions">
+                <button class="add-to-cart-btn brewin-btn" onclick="addToCartSize(this, 'Funky Monkey', 'brewin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Berry Fun</h4>
+                <p>Berry-forward & refreshing</p>
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 7.00)">16oz $7.00</button>
+                  <button class="size-btn" onclick="selectSize(this, 8.25)">24oz $8.25</button>
+                </div>
+              </div>
+              <div class="item-actions">
+                <button class="add-to-cart-btn brewin-btn" onclick="addToCartSize(this, 'Berry Fun', 'brewin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Mint Bomb</h4>
+                <p>Cool mint meets espresso</p>
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 7.25)">16oz $7.25</button>
+                  <button class="size-btn" onclick="selectSize(this, 8.50)">24oz $8.50</button>
+                </div>
+              </div>
+              <div class="item-actions">
+                <button class="add-to-cart-btn brewin-btn" onclick="addToCartSize(this, 'Mint Bomb', 'brewin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Caramel Cookie</h4>
+                <p>Sweet caramel cookie perfection</p>
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 7.25)">16oz $7.25</button>
+                  <button class="size-btn" onclick="selectSize(this, 8.50)">24oz $8.50</button>
+                </div>
+              </div>
+              <div class="item-actions">
+                <button class="add-to-cart-btn brewin-btn" onclick="addToCartSize(this, 'Caramel Cookie', 'brewin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Cinnamon Bun</h4>
+                <p>Warm cinnamon bun in a cup</p>
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 7.25)">16oz $7.25</button>
+                  <button class="size-btn" onclick="selectSize(this, 8.50)">24oz $8.50</button>
+                </div>
+              </div>
+              <div class="item-actions">
+                <button class="add-to-cart-btn brewin-btn" onclick="addToCartSize(this, 'Cinnamon Bun', 'brewin')">Add</button>
+              </div>
+            </div>
+
+            <div class="order-menu-item">
+              <div class="item-info">
+                <h4>Cookies & Cream</h4>
+                <p>Dessert in a cup</p>
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 7.25)">16oz $7.25</button>
+                  <button class="size-btn" onclick="selectSize(this, 8.50)">24oz $8.50</button>
+                </div>
+              </div>
+              <div class="item-actions">
+                <button class="add-to-cart-btn brewin-btn" onclick="addToCartSize(this, 'Cookies & Cream', 'brewin')">Add</button>
+              </div>
+            </div>
+
+            <h3 style="margin:32px 0 20px">Modifiers</h3>
+
+            <div class="order-menu-item">
+              <div class="item-info"><h4>Extra Syrup</h4></div>
+              <div class="item-actions">
+                <span style="font-weight:700;color:var(--brewin-primary)">+$1.00</span>
+                <button class="add-to-cart-btn brewin-btn" onclick="addToCart('Extra Syrup', 1.00, 'brewin')">Add</button>
+              </div>
+            </div>
+            <div class="order-menu-item">
+              <div class="item-info"><h4>Cold Foam</h4></div>
+              <div class="item-actions">
+                <span style="font-weight:700;color:var(--brewin-primary)">+$2.00</span>
+                <button class="add-to-cart-btn brewin-btn" onclick="addToCart('Cold Foam', 2.00, 'brewin')">Add</button>
+              </div>
+            </div>
+            <div class="order-menu-item">
+              <div class="item-info"><h4>Espresso Shot</h4></div>
+              <div class="item-actions">
+                <span style="font-weight:700;color:var(--brewin-primary)">+$1.50</span>
+                <button class="add-to-cart-btn brewin-btn" onclick="addToCart('Espresso Shot', 1.50, 'brewin')">Add</button>
+              </div>
+            </div>
+            <div class="order-menu-item">
+              <div class="item-info"><h4>Oat / Almond Milk</h4></div>
+              <div class="item-actions">
+                <span style="font-weight:700;color:var(--brewin-primary)">+$0.75</span>
+                <button class="add-to-cart-btn brewin-btn" onclick="addToCart('Oat/Almond Milk', 0.75, 'brewin')">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cart Panel -->
+        <div>
+          <div class="cart-panel" id="cart-panel">
+            <h3>Your Order</h3>
+            <div id="cart-items">
+              <div class="cart-empty">
+                <div class="icon">&#128722;</div>
+                <p>Your cart is empty.<br>Add some drinks!</p>
+              </div>
+            </div>
+            <div class="cart-total" id="cart-total-section" style="display:none">
+              <div class="row"><span>Subtotal</span><span id="cart-subtotal">$0.00</span></div>
+              <div class="row total"><span>Total</span><span id="cart-total-amount">$0.00</span></div>
+            </div>
+            <button class="checkout-btn" id="checkout-btn" disabled onclick="checkout()">
+              Place Order
+            </button>
+            <p style="text-align:center;font-size:0.8rem;color:var(--text-light);margin-top:12px">
+              Pay at pickup. We accept cash, card, Venmo & Cash App.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Special instructions -->
+      <div style="margin-top:32px;max-width:600px" class="fade-up">
+        <div class="form-group">
+          <label for="special-notes">Special Instructions (optional)</label>
+          <textarea id="special-notes" placeholder="Any flavor preferences, allergies, or special requests..."></textarea>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>What's Shakin' & What's Brewin'</h3>
+          <p>Two mobile beverage trucks bringing fresh-squeezed lemon shake-ups and handcrafted coffee to events near you.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/profile.php?id=61550268173974" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="menu.html">Full Menu</a>
+          <a href="order.html">Order Online</a>
+          <a href="shop.html">Shop Merch</a>
+          <a href="about.html">Our Story</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="contact.html#book">Event Catering</a>
+          <a href="contact.html#book">Private Parties</a>
+          <a href="contact.html#book">Corporate Events</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="contact.html">Send an Inquiry</a>
+          <a href="https://www.facebook.com/profile.php?id=61550268173974" target="_blank" rel="noopener">Shakin' on Facebook</a>
+          <a href="https://www.facebook.com/profile.php?id=61587524812366" target="_blank" rel="noopener">Brewin' on Facebook</a>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2024&ndash;2026 What's Shakin' & What's Brewin'. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Cart state
+    let cart = [];
+
+    function switchOrderBrand(brand) {
+      document.getElementById('order-shakin').style.display = brand === 'shakin' ? 'block' : 'none';
+      document.getElementById('order-brewin').style.display = brand === 'brewin' ? 'block' : 'none';
+      document.querySelectorAll('.menu-tab').forEach(t => t.className = 'menu-tab');
+      document.querySelector('[data-brand="'+brand+'"]').classList.add(brand === 'shakin' ? 'active-shakin' : 'active-brewin');
+    }
+
+    function selectSize(btn, price) {
+      const selector = btn.parentElement;
+      selector.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      btn.closest('.order-menu-item').dataset.selectedPrice = price;
+    }
+
+    function addToCart(name, price, brand) {
+      const existing = cart.find(i => i.name === name && i.price === price);
+      if (existing) { existing.qty++; }
+      else { cart.push({ name, price, brand, qty: 1 }); }
+      renderCart();
+      showToast(name + ' added!');
+    }
+
+    function addToCartSize(btn, name, brand) {
+      const item = btn.closest('.order-menu-item');
+      const activeSize = item.querySelector('.size-btn.active');
+      const price = parseFloat(item.dataset.selectedPrice || activeSize.textContent.match(/\$([\d.]+)/)[1]);
+      const sizeLabel = activeSize.textContent.match(/(\d+oz)/)[1];
+      const fullName = name + ' (' + sizeLabel + ')';
+      const existing = cart.find(i => i.name === fullName && i.price === price);
+      if (existing) { existing.qty++; }
+      else { cart.push({ name: fullName, price, brand, qty: 1 }); }
+      renderCart();
+      showToast(fullName + ' added!');
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      renderCart();
+    }
+
+    function updateQty(index, delta) {
+      cart[index].qty += delta;
+      if (cart[index].qty <= 0) cart.splice(index, 1);
+      renderCart();
+    }
+
+    function renderCart() {
+      const container = document.getElementById('cart-items');
+      const totalSection = document.getElementById('cart-total-section');
+      const checkoutBtn = document.getElementById('checkout-btn');
+
+      if (cart.length === 0) {
+        container.innerHTML = '<div class="cart-empty"><div class="icon">&#128722;</div><p>Your cart is empty.<br>Add some drinks!</p></div>';
+        totalSection.style.display = 'none';
+        checkoutBtn.disabled = true;
+        return;
+      }
+
+      let html = '';
+      let subtotal = 0;
+      cart.forEach((item, i) => {
+        const itemTotal = item.price * item.qty;
+        subtotal += itemTotal;
+        html += '<div class="cart-item">' +
+          '<div class="cart-item-info"><div class="name">' + item.name + '</div>' +
+          '<div class="detail">$' + item.price.toFixed(2) + ' each</div></div>' +
+          '<div class="cart-item-qty">' +
+          '<button class="qty-btn" onclick="updateQty('+i+',-1)">&minus;</button>' +
+          '<span>' + item.qty + '</span>' +
+          '<button class="qty-btn" onclick="updateQty('+i+',1)">+</button>' +
+          '</div>' +
+          '<div style="min-width:60px;text-align:right;font-weight:600">$' + itemTotal.toFixed(2) + '</div>' +
+          '</div>';
+      });
+      container.innerHTML = html;
+      document.getElementById('cart-subtotal').textContent = '$' + subtotal.toFixed(2);
+      document.getElementById('cart-total-amount').textContent = '$' + subtotal.toFixed(2);
+      totalSection.style.display = 'block';
+      checkoutBtn.disabled = false;
+    }
+
+    function checkout() {
+      const event = document.getElementById('event-select').value;
+      if (!event) {
+        showToast('Please select a pickup event first!', true);
+        document.getElementById('event-select').focus();
+        return;
+      }
+      const notes = document.getElementById('special-notes').value;
+      const items = cart.map(i => i.qty + 'x ' + i.name).join(', ');
+      const total = cart.reduce((s, i) => s + i.price * i.qty, 0).toFixed(2);
+
+      // Build mailto or form submission
+      const subject = encodeURIComponent('Online Order - What\'s Shakin\' & What\'s Brewin\'');
+      const body = encodeURIComponent(
+        'NEW ONLINE ORDER\n\n' +
+        'Items: ' + items + '\n' +
+        'Total: $' + total + '\n' +
+        'Pickup Event: ' + event + '\n' +
+        (notes ? 'Special Instructions: ' + notes + '\n' : '') +
+        '\nPlease confirm this order!'
+      );
+
+      // Open order confirmation modal
+      const modal = document.createElement('div');
+      modal.className = 'modal-overlay open';
+      modal.innerHTML = '<div class="modal" style="position:relative">' +
+        '<button class="modal-close" onclick="this.closest(\'.modal-overlay\').remove()">&times;</button>' +
+        '<h3>Order Summary</h3>' +
+        '<div style="margin-bottom:20px">' +
+        cart.map(i => '<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed var(--border)"><span>' + i.qty + 'x ' + i.name + '</span><span>$' + (i.price*i.qty).toFixed(2) + '</span></div>').join('') +
+        '<div style="display:flex;justify-content:space-between;padding:12px 0;font-weight:700;font-size:1.1rem"><span>Total</span><span>$' + total + '</span></div>' +
+        '</div>' +
+        '<p style="margin-bottom:16px;color:var(--text-light);font-size:0.9rem">To complete your order, send us a message with your order details. We\'ll confirm and have it ready for pickup!</p>' +
+        '<div style="display:flex;gap:12px;flex-wrap:wrap">' +
+        '<a href="https://www.facebook.com/profile.php?id=61550268173974" target="_blank" rel="noopener" class="btn btn-shakin" style="flex:1;justify-content:center">Message on Facebook</a>' +
+        '<a href="contact.html" class="btn btn-brewin" style="flex:1;justify-content:center">Send Inquiry</a>' +
+        '</div>' +
+        '</div>';
+      document.body.appendChild(modal);
+      modal.addEventListener('click', function(e) { if (e.target === modal) modal.remove(); });
+    }
+  </script>
+</body>
+</html>

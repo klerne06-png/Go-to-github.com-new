@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Book | What's Shakin' & What's Brewin'</title>
+  <meta name="description" content="Contact What's Shakin' and What's Brewin' for event booking, catering inquiries, and more. Book our mobile beverage trucks for your next event!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <span class="shakin-text">What's Shakin'</span>
+        <span class="amp">&</span>
+        <span class="brewin-text">What's Brewin'</span>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="order.html">Order Online</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html#book" class="nav-cta">Book an Event</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header dark-bg" style="background:url('img/image4.jpeg') center/cover no-repeat;position:relative">
+    <div style="position:absolute;inset:0;background:rgba(0,0,0,0.6)"></div>
+    <div class="container" style="position:relative;z-index:1">
+      <h1>Get in Touch</h1>
+      <p>Have a question? Want to book us? We'd love to hear from you!</p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Contact Form -->
+        <div>
+          <h2 style="margin-bottom:8px" id="book">Send Us a Message</h2>
+          <p style="color:var(--text-light);margin-bottom:32px">Fill out the form below and we'll get back to you as soon as possible.</p>
+
+          <form id="contact-form" onsubmit="handleContactSubmit(event)">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+              <div class="form-group">
+                <label for="first-name">First Name *</label>
+                <input type="text" id="first-name" name="first-name" required>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name *</label>
+                <input type="text" id="last-name" name="last-name" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="form-group">
+              <label for="inquiry-type">What can we help with? *</label>
+              <select id="inquiry-type" name="inquiry-type" required>
+                <option value="">Select an option...</option>
+                <option value="event-booking">Event Booking / Catering</option>
+                <option value="private-party">Private Party</option>
+                <option value="corporate">Corporate Event</option>
+                <option value="wedding">Wedding</option>
+                <option value="festival">Festival / Fair</option>
+                <option value="general">General Question</option>
+                <option value="feedback">Feedback</option>
+                <option value="collaboration">Business Collaboration</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <!-- Event-specific fields (shown conditionally) -->
+            <div id="event-fields" style="display:none">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+                <div class="form-group">
+                  <label for="event-date">Event Date</label>
+                  <input type="date" id="event-date" name="event-date">
+                </div>
+                <div class="form-group">
+                  <label for="event-time">Event Time</label>
+                  <input type="text" id="event-time" name="event-time" placeholder="e.g., 11am - 8pm">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="event-location">Event Location</label>
+                <input type="text" id="event-location" name="event-location" placeholder="Address or venue name">
+              </div>
+              <div class="form-group">
+                <label for="guest-count">Estimated Guest Count</label>
+                <input type="number" id="guest-count" name="guest-count" placeholder="Approximate number of guests">
+              </div>
+              <div class="form-group">
+                <label for="which-truck">Which truck(s) are you interested in?</label>
+                <select id="which-truck" name="which-truck">
+                  <option value="both">Both — What's Shakin' & What's Brewin'</option>
+                  <option value="shakin">What's Shakin' only</option>
+                  <option value="brewin">What's Brewin' only</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" required placeholder="Tell us about your event, question, or how we can help..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-weight:400">
+                <input type="checkbox" id="newsletter-opt" name="newsletter" style="width:auto;padding:0">
+                Sign me up for event updates & special offers
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-shakin btn-lg" style="width:100%;justify-content:center">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info Sidebar -->
+        <div>
+          <div class="contact-info-card">
+            <h4>Quick Contact</h4>
+            <div class="contact-info-item">
+              <div class="icon">&#128172;</div>
+              <div>
+                <strong>Facebook Messenger</strong><br>
+                <a href="https://www.facebook.com/profile.php?id=61550268173974" target="_blank" rel="noopener" style="color:var(--shakin-secondary)">What's Shakin' Facebook</a><br>
+                <a href="https://www.facebook.com/profile.php?id=61587524812366" target="_blank" rel="noopener" style="color:var(--shakin-secondary)">What's Brewin' Facebook</a>
+                <br><span style="font-size:0.8rem;color:var(--text-light)">Fastest response!</span>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="icon">&#128247;</div>
+              <div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="icon">&#128197;</div>
+              <div>
+                <strong>Event Schedule</strong><br>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <h4>What We Offer</h4>
+            <ul class="feature-list" style="margin-bottom:0">
+              <li style="padding:10px 0">Festival & fair catering</li>
+              <li style="padding:10px 0">Private party packages</li>
+              <li style="padding:10px 0">Corporate event service</li>
+              <li style="padding:10px 0">Wedding trailer rental & service</li>
+              <li style="padding:10px 0">Sporting tournaments</li>
+              <li style="padding:10px 0">School & community events</li>
+              <li style="padding:10px 0">Fundraiser partnerships</li>
+            </ul>
+          </div>
+
+          <div class="contact-info-card" style="background:linear-gradient(135deg, #000, #1a1a1a);color:var(--text-white)">
+            <h4 style="color:var(--text-white)">Why Book Us?</h4>
+            <p style="font-size:0.9rem;opacity:0.85;line-height:1.7">
+              We bring everything we need — truck, supplies, cups, and smiles.
+              Our setup is self-contained and professional. Whether it's 50 guests or 5,000,
+              we scale to fit your event perfectly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wedding Trailer Rental -->
+  <section style="background:var(--bg-white)">
+    <div class="container">
+      <div class="story-section fade-up">
+        <div class="story-image" style="background:none;min-height:0"><img src="img/image3.jpeg" alt="What's Shakin' lemon shake-up trailer" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg)"></div>
+        <div class="story-content">
+          <span class="section-label shakin">Wedding Rentals</span>
+          <h2>Rent Our Lemon Shake-Up Trailer</h2>
+          <p>Make your wedding unforgettable with our vintage-style What's Shakin' trailer! Our charming lemonade trailer with its iconic "LEMONADE" marquee sign and black &amp; white checkered bunting is the perfect addition to your special day.</p>
+          <p>Whether you want us to serve fresh-squeezed lemon shake-ups, limeades, and specialty drinks to your guests, or you'd like to rent the trailer as a stunning backdrop and self-serve station, we'll work with you to create the perfect package.</p>
+          <ul class="feature-list" style="margin-top:16px">
+            <li>Full-service or self-serve rental options</li>
+            <li>Perfect photo backdrop for your guests</li>
+            <li>Customizable drink menu for your event</li>
+            <li>Setup and teardown included</li>
+            <li>Book both trailers for a complete beverage experience</li>
+          </ul>
+          <a href="#book" class="btn btn-shakin" style="margin-top:16px" onclick="document.getElementById('inquiry-type').value='wedding';document.getElementById('inquiry-type').dispatchEvent(new Event('change'))">Get a Wedding Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label shakin">FAQ</span>
+        <h2>Common Questions</h2>
+      </div>
+      <div style="max-width:800px;margin:0 auto" class="fade-up">
+        <div class="contact-info-card" style="margin-bottom:16px;cursor:pointer" onclick="this.querySelector('.faq-answer').style.display=this.querySelector('.faq-answer').style.display==='none'?'block':'none'">
+          <h4 style="display:flex;justify-content:space-between;align-items:center">
+            How far in advance should I book?
+            <span style="font-size:1.2rem;color:var(--text-light)">+</span>
+          </h4>
+          <p class="faq-answer" style="display:none;margin-top:12px;color:var(--text-light)">
+            We recommend booking at least 2-4 weeks in advance, especially during peak season (May-September).
+            However, we sometimes have last-minute availability, so don't hesitate to reach out!
+          </p>
+        </div>
+        <div class="contact-info-card" style="margin-bottom:16px;cursor:pointer" onclick="this.querySelector('.faq-answer').style.display=this.querySelector('.faq-answer').style.display==='none'?'block':'none'">
+          <h4 style="display:flex;justify-content:space-between;align-items:center">
+            Do you require a minimum guest count?
+            <span style="font-size:1.2rem;color:var(--text-light)">+</span>
+          </h4>
+          <p class="faq-answer" style="display:none;margin-top:12px;color:var(--text-light)">
+            Minimums vary depending on location and event type. Reach out and we'll work with you to find a package that fits!
+          </p>
+        </div>
+        <div class="contact-info-card" style="margin-bottom:16px;cursor:pointer" onclick="this.querySelector('.faq-answer').style.display=this.querySelector('.faq-answer').style.display==='none'?'block':'none'">
+          <h4 style="display:flex;justify-content:space-between;align-items:center">
+            Can I book both trucks for my event?
+            <span style="font-size:1.2rem;color:var(--text-light)">+</span>
+          </h4>
+          <p class="faq-answer" style="display:none;margin-top:12px;color:var(--text-light)">
+            Absolutely! Many of our clients book both What's Shakin' and What's Brewin' together.
+            It's a great way to offer variety — refreshing shakes AND craft coffee for all your guests.
+          </p>
+        </div>
+        <div class="contact-info-card" style="margin-bottom:16px;cursor:pointer" onclick="this.querySelector('.faq-answer').style.display=this.querySelector('.faq-answer').style.display==='none'?'block':'none'">
+          <h4 style="display:flex;justify-content:space-between;align-items:center">
+            What payment methods do you accept?
+            <span style="font-size:1.2rem;color:var(--text-light)">+</span>
+          </h4>
+          <p class="faq-answer" style="display:none;margin-top:12px;color:var(--text-light)">
+            We accept cash, all major credit/debit cards, Venmo, and Cash App. We've got you covered!
+          </p>
+        </div>
+        <div class="contact-info-card" style="margin-bottom:16px;cursor:pointer" onclick="this.querySelector('.faq-answer').style.display=this.querySelector('.faq-answer').style.display==='none'?'block':'none'">
+          <h4 style="display:flex;justify-content:space-between;align-items:center">
+            Can I rent the lemon shake-up trailer for my wedding?
+            <span style="font-size:1.2rem;color:var(--text-light)">+</span>
+          </h4>
+          <p class="faq-answer" style="display:none;margin-top:12px;color:var(--text-light)">
+            Yes! Our vintage-style What's Shakin' trailer is a gorgeous addition to any wedding.
+            We offer full-service options where we serve your guests, or rental-only options where we set up the trailer as a self-serve station or photo backdrop.
+            Contact us for wedding packages and pricing!
+          </p>
+        </div>
+        <div class="contact-info-card" style="margin-bottom:16px;cursor:pointer" onclick="this.querySelector('.faq-answer').style.display=this.querySelector('.faq-answer').style.display==='none'?'block':'none'">
+          <h4 style="display:flex;justify-content:space-between;align-items:center">
+            Do you have sugar-free / dairy-free options?
+            <span style="font-size:1.2rem;color:var(--text-light)">+</span>
+          </h4>
+          <p class="faq-answer" style="display:none;margin-top:12px;color:var(--text-light)">
+            Yes! What's Shakin' has 9 sugar-free flavor options and stevia sweetener.
+            What's Brewin' offers 7 sugar-free syrups plus oat and almond milk alternatives.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>What's Shakin' & What's Brewin'</h3>
+          <p>Two mobile beverage trucks bringing fresh-squeezed lemon shake-ups and handcrafted coffee to events near you.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/profile.php?id=61550268173974" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="menu.html">Full Menu</a>
+          <a href="order.html">Order Online</a>
+          <a href="shop.html">Shop Merch</a>
+          <a href="about.html">Our Story</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="contact.html#book">Event Catering</a>
+          <a href="contact.html#book">Private Parties</a>
+          <a href="contact.html#book">Corporate Events</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="contact.html">Send an Inquiry</a>
+          <a href="https://www.facebook.com/profile.php?id=61550268173974" target="_blank" rel="noopener">Shakin' on Facebook</a>
+          <a href="https://www.facebook.com/profile.php?id=61587524812366" target="_blank" rel="noopener">Brewin' on Facebook</a>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2024&ndash;2026 What's Shakin' & What's Brewin'. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <div class="floating-social">
+    <a href="https://www.facebook.com/profile.php?id=61550268173974" target="_blank" rel="noopener" class="fb" aria-label="Facebook"><svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Show/hide event fields based on inquiry type
+    document.getElementById('inquiry-type').addEventListener('change', function() {
+      const eventTypes = ['event-booking', 'private-party', 'corporate', 'wedding', 'festival'];
+      document.getElementById('event-fields').style.display =
+        eventTypes.includes(this.value) ? 'block' : 'none';
+    });
+
+    // Handle form submission
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+
+      // Build a readable summary for mailto fallback
+      const name = data.get('first-name') + ' ' + data.get('last-name');
+      const email = data.get('email');
+      const phone = data.get('phone') || 'Not provided';
+      const type = data.get('inquiry-type');
+      const message = data.get('message');
+
+      let body = 'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'Phone: ' + phone + '\n' +
+        'Inquiry Type: ' + type + '\n';
+
+      if (data.get('event-date')) body += 'Event Date: ' + data.get('event-date') + '\n';
+      if (data.get('event-time')) body += 'Event Time: ' + data.get('event-time') + '\n';
+      if (data.get('event-location')) body += 'Location: ' + data.get('event-location') + '\n';
+      if (data.get('guest-count')) body += 'Guest Count: ' + data.get('guest-count') + '\n';
+      if (data.get('which-truck')) body += 'Truck(s): ' + data.get('which-truck') + '\n';
+
+      body += '\nMessage:\n' + message;
+
+      // Show success and offer to send via Facebook
+      const modal = document.createElement('div');
+      modal.className = 'modal-overlay open';
+      modal.innerHTML = '<div class="modal" style="position:relative">' +
+        '<button class="modal-close" onclick="this.closest(\'.modal-overlay\').remove()">&times;</button>' +
+        '<div style="text-align:center;margin-bottom:20px"><div style="font-size:3rem;margin-bottom:8px">&#9989;</div>' +
+        '<h3>Message Ready!</h3></div>' +
+        '<p style="color:var(--text-light);margin-bottom:20px;text-align:center">Send your inquiry through one of these channels and we\'ll get back to you ASAP:</p>' +
+        '<div style="display:flex;flex-direction:column;gap:12px">' +
+        '<a href="https://www.facebook.com/profile.php?id=61550268173974" target="_blank" rel="noopener" class="btn btn-shakin" style="justify-content:center;width:100%">Message on Facebook (Fastest!)</a>' +
+        '</div>' +
+        '<div style="margin-top:20px;padding:16px;background:var(--bg);border-radius:var(--radius);font-size:0.85rem">' +
+        '<strong>Your inquiry details (copy & paste):</strong><br><pre style="white-space:pre-wrap;margin-top:8px;font-family:inherit;color:var(--text-light)">' + body + '</pre></div>' +
+        '</div>';
+      document.body.appendChild(modal);
+      modal.addEventListener('click', function(ev) { if (ev.target === modal) modal.remove(); });
+
+      form.reset();
+    }
+
+    // Auto-scroll to booking section if hash present
+    if (window.location.hash === '#book') {
+      setTimeout(function() {
+        document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 300);
+    }
+  </script>
+</body>
+</html>

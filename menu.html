@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | What's Shakin' & What's Brewin'</title>
+  <meta name="description" content="Full menu for What's Shakin' and What's Brewin'. Fresh lemon shake-ups, specialty coffee, cold brew, flavored drinks & more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <span class="shakin-text">What's Shakin'</span>
+        <span class="amp">&</span>
+        <span class="brewin-text">What's Brewin'</span>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html" class="active">Menu</a>
+        <a href="order.html">Order Online</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html#book" class="nav-cta">Book an Event</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header dark-bg" style="background:url('img/image2.jpg') center/cover no-repeat;position:relative">
+    <div style="position:absolute;inset:0;background:rgba(0,0,0,0.6)"></div>
+    <div class="container" style="position:relative;z-index:1">
+      <h1>Our Menu</h1>
+      <p>From fresh-squeezed citrus to handcrafted coffee. Prices include tax.</p>
+    </div>
+  </div>
+
+  <!-- Menu Tabs & Content -->
+  <section>
+    <div class="container">
+      <div class="menu-tabs">
+        <button class="menu-tab active-shakin" data-brand="shakin" onclick="switchMenuTab('shakin')">What's Shakin'</button>
+        <button class="menu-tab" data-brand="brewin" onclick="switchMenuTab('brewin')">What's Brewin'</button>
+        <button class="menu-tab" data-brand="all" onclick="switchMenuTab('all')">Show All</button>
+      </div>
+
+      <!-- WHAT'S SHAKIN' MENU -->
+      <div id="menu-shakin">
+        <div class="section-header" style="margin-bottom:40px">
+          <span class="section-label shakin" id="shakin">What's Shakin'</span>
+          <h2>Fresh-Squeezed Drinks</h2>
+        </div>
+
+        <div class="menu-category">
+          <h3>Signature Drinks</h3>
+          <div class="menu-grid">
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Lemon Shake-Up</h4>
+                <p>32oz of fresh-squeezed goodness. Stevia available.</p>
+              </div>
+              <span class="menu-item-price shakin-price">$6.00</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Limeade</h4>
+                <p>Fresh-squeezed limeade, 32oz. Stevia available.</p>
+              </div>
+              <span class="menu-item-price shakin-price">$6.00</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Arnold Palmer</h4>
+                <p>Half lemonade, half tea — the perfect combo.</p>
+              </div>
+              <span class="menu-item-price shakin-price">$5.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-category">
+          <h3>Tea & More</h3>
+          <div class="menu-grid">
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Sweet Tea</h4>
+                <p>Classic sweet tea</p>
+              </div>
+              <span class="menu-item-price shakin-price">$4.00</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Unsweet Tea</h4>
+                <p>Unsweet for the purists</p>
+              </div>
+              <span class="menu-item-price shakin-price">$4.00</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Half & Half Tea</h4>
+                <p>Half sweet, half unsweet</p>
+              </div>
+              <span class="menu-item-price shakin-price">$4.00</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Soda</h4>
+                <p>Dr Pepper, Coke, Diet Coke, Sprite</p>
+              </div>
+              <span class="menu-item-price shakin-price">$2.00</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Water</h4>
+                <p>Bottled water</p>
+              </div>
+              <span class="menu-item-price shakin-price">$2.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-category">
+          <h3>Flavor Add-Ins <span style="font-weight:400;font-size:0.9rem;color:var(--text-light)">+$1.00 each</span></h3>
+          <div class="menu-addons">
+            <h4>Regular Flavors</h4>
+            <div class="addon-tags">
+              <span class="addon-tag">Cherry</span>
+              <span class="addon-tag">Watermelon</span>
+              <span class="addon-tag">Blackberry</span>
+              <span class="addon-tag">Green Apple</span>
+              <span class="addon-tag">Strawberry</span>
+              <span class="addon-tag">Raspberry</span>
+              <span class="addon-tag">Blue-Raspberry</span>
+              <span class="addon-tag">Pomegranate</span>
+              <span class="addon-tag">Lavender</span>
+              <span class="addon-tag">Passion Fruit</span>
+              <span class="addon-tag">Peach</span>
+              <span class="addon-tag">Prickly Pear</span>
+              <span class="addon-tag">Mango</span>
+              <span class="addon-tag">Huckleberry</span>
+              <span class="addon-tag">Wild Berry</span>
+            </div>
+          </div>
+          <div class="menu-addons" style="margin-top:12px">
+            <h4>Sugar-Free Flavors</h4>
+            <div class="addon-tags">
+              <span class="addon-tag">Cotton Candy</span>
+              <span class="addon-tag">Coconut</span>
+              <span class="addon-tag">Pina Colada</span>
+              <span class="addon-tag">Mermaid</span>
+              <span class="addon-tag">Unicorn</span>
+              <span class="addon-tag">Blueberry Lavender</span>
+              <span class="addon-tag">Hibiscus Passion Fruit</span>
+              <span class="addon-tag">Raspberry</span>
+              <span class="addon-tag">Dragonfruit Acai</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-category">
+          <h3>Boba <span style="font-weight:400;font-size:0.9rem;color:var(--text-light)">+$1.00</span></h3>
+          <div class="menu-addons">
+            <div class="addon-tags">
+              <span class="addon-tag">Strawberry Boba</span>
+              <span class="addon-tag">Mango Boba</span>
+              <span class="addon-tag">Passion Fruit Boba</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-category">
+          <h3>Other Items</h3>
+          <div class="menu-grid">
+            <div class="menu-item">
+              <div class="menu-item-info"><h4>Cotton Candy</h4></div>
+              <span class="menu-item-price shakin-price">$3.00</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info"><h4>Pickles</h4></div>
+              <span class="menu-item-price shakin-price">$1.00</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Flavored Coffee Beans — Caramel Bourbon Pecan</h4>
+                <p>8oz bag</p>
+              </div>
+              <span class="menu-item-price shakin-price">$12.15</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Flavored Coffee Beans — Caramel Bourbon Pecan</h4>
+                <p>16oz bag</p>
+              </div>
+              <span class="menu-item-price shakin-price">$23.00</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Espresso Beans</h4>
+                <p>8oz bag</p>
+              </div>
+              <span class="menu-item-price shakin-price">$12.15</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Espresso Beans</h4>
+                <p>16oz bag</p>
+              </div>
+              <span class="menu-item-price shakin-price">$23.99</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WHAT'S BREWIN' MENU -->
+      <div id="menu-brewin">
+        <div class="section-header" style="margin-bottom:40px;margin-top:60px">
+          <span class="section-label brewin" id="brewin">What's Brewin'</span>
+          <h2>Handcrafted Coffee & More</h2>
+          <p style="margin-top:8px;font-size:0.95rem;color:var(--text-light)">The full What's Shakin' menu is also available at the Brewin' trailer!</p>
+        </div>
+
+        <div class="menu-category">
+          <h3>Base Drinks</h3>
+          <div class="menu-grid">
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Cold Brew</h4>
+                <p>Smooth & bold, served cold</p>
+              </div>
+              <span class="menu-item-price brewin-price">$5.50 / $6.25</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Chai Latte</h4>
+                <p>Spiced chai with steamed milk</p>
+              </div>
+              <span class="menu-item-price brewin-price">$6.50 / $7.25</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Matcha</h4>
+                <p>Premium matcha latte</p>
+              </div>
+              <span class="menu-item-price brewin-price">$6.50 / $7.75</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Latte</h4>
+                <p>Classic espresso & steamed milk</p>
+              </div>
+              <span class="menu-item-price brewin-price">$6.50 / $7.75</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Mocha</h4>
+                <p>Espresso, chocolate & steamed milk</p>
+              </div>
+              <span class="menu-item-price brewin-price">$6.50 / $7.75</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Americano</h4>
+                <p>Bold espresso with hot water</p>
+              </div>
+              <span class="menu-item-price brewin-price">$4.25 / $5.00</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Hot Coffee</h4>
+                <p>Fresh brewed drip coffee</p>
+              </div>
+              <span class="menu-item-price brewin-price">$3.50 / $4.50</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Hot Apple Cider</h4>
+                <p>Warm spiced apple cider</p>
+              </div>
+              <span class="menu-item-price brewin-price">$4.00 / $4.50</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Hot Tea</h4>
+                <p>Assorted tea selection</p>
+              </div>
+              <span class="menu-item-price brewin-price">$3.00 / $3.50</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Gourmet Hot Cocoa</h4>
+                <p>Rich, creamy hot chocolate</p>
+              </div>
+              <span class="menu-item-price brewin-price">$4.25 / $5.00</span>
+            </div>
+          </div>
+          <p style="text-align:center;margin-top:16px;color:var(--text-light);font-size:0.9rem">Prices shown as 16oz / 24oz</p>
+        </div>
+
+        <div class="menu-category">
+          <h3>Specialty Drinks</h3>
+          <div class="menu-grid">
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Muddy Paws</h4>
+                <p>Our most popular specialty drink!</p>
+              </div>
+              <span class="menu-item-price brewin-price">$7.25 / $8.50</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Big Red</h4>
+                <p>Bold & unforgettable</p>
+              </div>
+              <span class="menu-item-price brewin-price">$7.25 / $8.50</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>The Turtle</h4>
+                <p>Rich caramel & chocolate layers</p>
+              </div>
+              <span class="menu-item-price brewin-price">$7.25 / $8.50</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Day Dreamer Chai</h4>
+                <p>Our twist on classic chai</p>
+              </div>
+              <span class="menu-item-price brewin-price">$7.00 / $8.25</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Funky Monkey</h4>
+                <p>A fun, fruity coffee creation</p>
+              </div>
+              <span class="menu-item-price brewin-price">$7.00 / $8.25</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Berry Fun</h4>
+                <p>Berry-forward & refreshing</p>
+              </div>
+              <span class="menu-item-price brewin-price">$7.00 / $8.25</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Mint Bomb</h4>
+                <p>Cool mint meets bold espresso</p>
+              </div>
+              <span class="menu-item-price brewin-price">$7.25 / $8.50</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Caramel Cookie</h4>
+                <p>Sweet caramel cookie perfection</p>
+              </div>
+              <span class="menu-item-price brewin-price">$7.25 / $8.50</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Cinnamon Bun</h4>
+                <p>Warm cinnamon bun flavors in a cup</p>
+              </div>
+              <span class="menu-item-price brewin-price">$7.25 / $8.50</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Cookies & Cream</h4>
+                <p>Dessert in a cup</p>
+              </div>
+              <span class="menu-item-price brewin-price">$7.25 / $8.50</span>
+            </div>
+          </div>
+          <p style="text-align:center;margin-top:16px;color:var(--text-light);font-size:0.9rem">Prices shown as 16oz / 24oz</p>
+        </div>
+
+        <div class="menu-category">
+          <h3>Syrup Flavors <span style="font-weight:400;font-size:0.9rem;color:var(--text-light)">Add to any drink</span></h3>
+          <div class="menu-addons">
+            <h4>Regular Syrups</h4>
+            <div class="addon-tags">
+              <span class="addon-tag">Almond</span>
+              <span class="addon-tag">Apple</span>
+              <span class="addon-tag">Blueberry</span>
+              <span class="addon-tag">Bourbon Caramel</span>
+              <span class="addon-tag">Butter Rum</span>
+              <span class="addon-tag">Butter Pecan</span>
+              <span class="addon-tag">Butterscotch</span>
+              <span class="addon-tag">Caramel</span>
+              <span class="addon-tag">Cherry</span>
+              <span class="addon-tag">Cheesecake</span>
+              <span class="addon-tag">Cream de Banana</span>
+              <span class="addon-tag">French Vanilla</span>
+              <span class="addon-tag">Hazelnut</span>
+              <span class="addon-tag">Irish Cream</span>
+              <span class="addon-tag">Lavender</span>
+              <span class="addon-tag">Peanut Butter</span>
+              <span class="addon-tag">Raspberry</span>
+              <span class="addon-tag">Salted Caramel</span>
+              <span class="addon-tag">S'mores</span>
+              <span class="addon-tag">Toasted Marshmallow</span>
+              <span class="addon-tag">White Chocolate</span>
+            </div>
+          </div>
+          <div class="menu-addons" style="margin-top:12px">
+            <h4>Sugar-Free Syrups</h4>
+            <div class="addon-tags">
+              <span class="addon-tag">Brown Sugar Cinnamon SF</span>
+              <span class="addon-tag">Chocolate SF</span>
+              <span class="addon-tag">Chocolate Chip Cookie Dough SF</span>
+              <span class="addon-tag">French Vanilla SF</span>
+              <span class="addon-tag">Hazelnut SF</span>
+              <span class="addon-tag">Vanilla Bean SF</span>
+              <span class="addon-tag">White Chocolate SF</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-category">
+          <h3>Modifiers</h3>
+          <div class="menu-grid">
+            <div class="menu-item">
+              <div class="menu-item-info"><h4>Extra Syrup</h4></div>
+              <span class="menu-item-price brewin-price">+$1.00</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info"><h4>Cold Foam</h4></div>
+              <span class="menu-item-price brewin-price">+$2.00</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info"><h4>Espresso Shot</h4></div>
+              <span class="menu-item-price brewin-price">+$1.50</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Oat / Almond Milk</h4>
+                <p>Non-dairy milk substitute</p>
+              </div>
+              <span class="menu-item-price brewin-price">+$0.75</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:var(--bg-white)">
+    <div class="container text-center">
+      <div class="events-banner fade-up">
+        <h2>Ready to Order?</h2>
+        <p>Skip the line! Order online for pickup at your next event.</p>
+        <a href="order.html" class="btn btn-shakin btn-lg">Order Online Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>What's Shakin' & What's Brewin'</h3>
+          <p>Two mobile beverage trucks bringing fresh-squeezed lemon shake-ups and handcrafted coffee to events near you.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/profile.php?id=61550268173974" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="menu.html">Full Menu</a>
+          <a href="order.html">Order Online</a>
+          <a href="shop.html">Shop Merch</a>
+          <a href="about.html">Our Story</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="contact.html#book">Event Catering</a>
+          <a href="contact.html#book">Private Parties</a>
+          <a href="contact.html#book">Corporate Events</a>
+          <a href="contact.html#book">Festivals</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="contact.html">Send an Inquiry</a>
+          <a href="https://www.facebook.com/profile.php?id=61550268173974" target="_blank" rel="noopener">Shakin' on Facebook</a>
+          <a href="https://www.facebook.com/profile.php?id=61587524812366" target="_blank" rel="noopener">Brewin' on Facebook</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2024&ndash;2026 What's Shakin' & What's Brewin'. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-social">
+    <a href="https://www.facebook.com/profile.php?id=61550268173974" target="_blank" rel="noopener" class="fb" aria-label="Facebook"><svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    function switchMenuTab(brand) {
+      const shakin = document.getElementById('menu-shakin');
+      const brewin = document.getElementById('menu-brewin');
+      const tabs = document.querySelectorAll('.menu-tab');
+
+      tabs.forEach(t => { t.className = 'menu-tab'; });
+
+      if (brand === 'shakin') {
+        shakin.style.display = 'block';
+        brewin.style.display = 'none';
+        document.querySelector('[data-brand="shakin"]').classList.add('active-shakin');
+      } else if (brand === 'brewin') {
+        shakin.style.display = 'none';
+        brewin.style.display = 'block';
+        document.querySelector('[data-brand="brewin"]').classList.add('active-brewin');
+      } else {
+        shakin.style.display = 'block';
+        brewin.style.display = 'block';
+        document.querySelector('[data-brand="all"]').classList.add('active-shakin');
+      }
+    }
+
+    // Handle hash navigation
+    if (window.location.hash === '#brewin') switchMenuTab('brewin');
+    else if (window.location.hash === '#shakin') switchMenuTab('shakin');
+  </script>
+</body>
+</html>
